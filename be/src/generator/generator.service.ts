@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreatePsevdoNumbersDto } from './dto/createPsevdo.dto';
 import { GeneratorResponseInterface } from './types/generatorResponse.interface';
+import { createHash } from 'crypto';
 import * as path from 'path';
 import * as fs from 'fs/promises';
 

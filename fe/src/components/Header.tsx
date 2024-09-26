@@ -21,8 +21,8 @@ const Header = () => {
         <Button color="inherit" component={Link} to="/generator" sx={{ ml: 2, color: "#FFD700" }}>
           Генератор
         </Button>
-        <Button color="inherit" component={Link} to="/" sx={{ ml: 2, color: "#FFD700" }}>
-          Лаба 2
+        <Button color="inherit" component={Link} to="/md5" sx={{ ml: 2, color: "#FFD700" }}>
+          MD5
         </Button>
       </Toolbar>
     </AppBar>

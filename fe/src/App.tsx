@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Generator from "./components/Generator";
+import MD5 from "./components/MD5";
 import { Box, Container } from "@mui/material";
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#121212", // Dark background
-          color: "#fff", // White text color
+          backgroundColor: "#121212",
+          color: "#fff",
         }}
       >
         <Header />
@@ -22,7 +23,7 @@ function App() {
           sx={{
             flexGrow: 1,
             mt: 2,
-            backgroundColor: "#1e1e1e", // Slightly lighter background
+            backgroundColor: "#1e1e1e",
             borderRadius: 2,
             boxShadow: 3,
           }}
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/generator" element={<Generator />} />
+            <Route path="/md5" element={<MD5 />} />
           </Routes>
         </Container>
       </Box>

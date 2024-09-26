@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import smallImage from "../assets/bitcoin_glasses.webp"; // Замініть шлях на ваш файл зображення
 
 const Generator: React.FC = () => {
-  const [params, setParams] = useState<GeneratorParams>({ m: 0, a: 0, c: 0, x0: 0, count: 0 });
+  const [params, setParams] = useState<GeneratorParams>({ m: -1, a: -1, c: -1, x0: -1, count: 0 });
   const [results, setResults] = useState<number[]>([]);
   const [period, setPeriod] = useState<number | null>(null);
   const [fileName, setFileName] = useState<string>("");
@@ -20,6 +20,7 @@ const Generator: React.FC = () => {
   const handleGenerate = async () => {
     setLoading(true); // Встановлюємо стан завантаження в true
     try {
+      console.log(params);
       const result = await generateNumbers(params);
       setResults(result.uniqueNumbers);
       setPeriod(result.period);
